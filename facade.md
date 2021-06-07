@@ -70,8 +70,8 @@ type Game struct {
 }
 
 func (g *Game) shooting()  {
-    g.fire.Fire()
     g.fire.UseBullet()
+    g.fire.Fire()
     g.user.AddScore()
     g.user.LoseBlood()
 }
@@ -92,8 +92,8 @@ func main(){
 测试结果：
 
 ```
-开火
 上子弹
+开火
 得分
 掉血
 ```
