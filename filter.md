@@ -131,8 +131,12 @@ func main(){
 ```
 
 测试结果：
-
-![pic](https://doc.shiyanlou.com/courses/1851/1240622/7b943e3d975791e71a39741957b6fd41-0)
+```
+[{果壳 false false true false} {陶瓷 false false true false}]
+[{菜根菜叶 false false false true} {果皮 false false false true}]
+[{水银温度计 true false false false} {电池 true false false false} {灯泡 true false false false}]
+[{废纸塑料 false true false false} {金属和布料 false true false false} {玻璃 false true false false}]
+```
 
 ## 总结
 
