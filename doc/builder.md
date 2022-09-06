@@ -19,7 +19,7 @@
 ### UML 类图
 
 
-![pic](https://github.com/wangjinh/picture/blob/master/builder.png)
+![pic](../img/builder.png)
 
 
 
@@ -36,7 +36,6 @@ package main
 
 //产品类MEAL(套餐类)
 type Meal struct {
-  //drink和food2个属性
 	drink string
 	food string
 }
@@ -44,6 +43,7 @@ type Meal struct {
 func (m *Meal) SetFood(food string) {
 	m.food=food
 }
+
 func (m *Meal) GetFood() string {
 	return  m.food
 }
@@ -69,48 +69,48 @@ type IMealBuilder interface {
 
 //具体建造者SubMealBuilderA (A套餐建造者)
 type SubMealBuilderA struct {
-	MealBuilder
+	mb MealBuilder // 将套餐构建 当作A套餐建造者的属性
 }
 
 func (s *SubMealBuilderA) GetMeal() *Meal {
-	return &s.meal
+	return &s.mb.meal
 }
 
 func (s *SubMealBuilderA) BuildFood() {
-	s.meal.SetFood("一个鸡腿堡")
+	s.mb.meal.SetFood("一个鸡腿堡")
 }
 
 func (s *SubMealBuilderA) BuildDrink() {
-	s.meal.SetDrink("一杯可乐")
+	s.mb.meal.SetDrink("一杯可乐")
 }
 
 //具体建造者SubMealBuilderB (B套餐建造者)
 type SubMealBuilderB struct {
-	MealBuilder
+	mb MealBuilder
 }
 
 func (s *SubMealBuilderB) GetMeal() *Meal {
-	return &s.meal
+	return &s.mb.meal
 }
 
 func (s *SubMealBuilderB) BuildFood() {
-	s.meal.SetFood("一个鸡肉卷")
+	s.mb.meal.SetFood("一个鸡肉卷")
 }
 
 func (s *SubMealBuilderB) BuildDrink() {
-	s.meal.SetDrink("一杯果汁")
+	s.mb.meal.SetDrink("一杯果汁")
 }
 
 //指挥者KFCWaiter(服务员类)
 type KFCWaiter struct {
-	 mb IMealBuilder
+	mb IMealBuilder
 }
 
 func (k *KFCWaiter)SetMealBuilder( mb IMealBuilder)  {
-	k.mb=mb
+	k.mb = mb
 }
 
-func (k *KFCWaiter)construct() *Meal {
+func (k *KFCWaiter)Construct() *Meal {
 	k.mb.BuildDrink()
 	k.mb.BuildFood()
 	return k.mb.GetMeal()
@@ -123,11 +123,12 @@ func main() {
 	//kfc.SetMealBuilder(smbA)
 	kfc := KFCWaiter{mb: smbB}
 	kfc.SetMealBuilder(smbB)
-	meal := kfc.construct()
+	meal := kfc.Construct()
 	println("套餐组成：")
 	println(meal.GetFood())
 	println(meal.GetDrink())
 }
+
 ```
 
 测试结果:
