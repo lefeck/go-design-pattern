@@ -19,7 +19,7 @@
 ### UML 类图
 
 
-![pic](../imgs/builder.png)
+![pic](../img/builder.png)
 
 
 

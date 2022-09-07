@@ -191,7 +191,6 @@ func (r *RestrictedState) stateCheck() error {
 }
 
 func main() {
-
 	acc := Account{AccountState{}, "段誉", 0.0}
 	acc.deposit(1000)
 	acc.withdraw(2000)

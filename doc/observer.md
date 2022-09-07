@@ -29,7 +29,7 @@
 
 以生活中的读者订阅为例，假设，读者 A 和读者 B 订阅了某平台的图书，当有新的图书发布时就会给两位读者发送图书，UML类图如下：
 
-![pic](../imgs/observer.png)
+![pic](../img/observer.png)
 
 
 
@@ -135,7 +135,7 @@ A 收到了图书 go 高级编程
 
 UML类图
 
-![pic](../imgs/observers.png)
+![pic](../img/observers.png)
 ```cgo
 package main
 
