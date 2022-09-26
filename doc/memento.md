@@ -24,7 +24,7 @@
 
 为了实现撤销功能，这里使用备忘录模式来设计中国象棋软件，其基本结构如下所示：
 
-![pic](https://github.com/wangjinh/picture/blob/master/memento.png)
+![pic](./img/memento.png)
 
 其中，Chessman充当原发器，ChessmanMemento充当备忘录，MementoCaretaker充当负责人，在MementoCaretaker中定义了一个ChessmanMemento类型的对象，用于存储备忘录。完整代码如下所示:
 

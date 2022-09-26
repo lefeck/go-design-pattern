@@ -26,7 +26,7 @@
 
 大家先想象一下平常使用的电视机，它有关闭，待机，播放三种状态，其中要播放就得先开机。关机的时候又要保证电视是开启或者是待机。类图如下所示：
 
-![pic](https://github.com/wangjinh/picture/blob/master/state1.png)
+![pic](./img/state1.png)
 
 代码实现如下：
 

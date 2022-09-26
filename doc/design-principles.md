@@ -2,8 +2,6 @@
 
 ## 开闭原则
 
-
-
 > 开闭原则(Open Closed Principle，OCP) 由勃兰特.梅耶(Bertrand Meyer)提出，他在 1988 年的著作《面向对象软件构造》( Object Oriented Software Construction)中提出：软件实体应当对扩展开放，对修改关闭(Software entities should be open for extension, but closed for modification)，这就是开闭原则的经典定义。
 
 **开闭原则是设计模式中的总原则，开闭原则就是说:对拓展开放、对修改关闭。**模块应该在尽可能不修改代码的前提下进行拓展，这就需要使用接口和抽象类来实现预期效果。 我们举例说明什么是开闭原则，以 4s 店销售汽车为例，其类图如图所示:
@@ -136,10 +134,7 @@ PASS
 - 提高代码复用性
 - 提高代码的可维护性
 
-
-
 ## **单一职责原则**
-
 
 
 单一职责原则，简单来说就是保证设计类、接口、方法时做到**功能单一，权责明确**。比如：
